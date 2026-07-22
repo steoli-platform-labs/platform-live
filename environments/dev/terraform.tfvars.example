@@ -1,0 +1,26 @@
+aws_region          = "eu-north-1"
+allowed_account_ids = "123456789012"
+workspace_path      = "/Users/your-user/dev/steoli-platform-labs"
+
+project_name = "solab"
+environment  = "dev"
+
+vpc_cidr              = "10.100.0.0/24"
+secondary_cidr_blocks = ["100.64.0.0/18"]
+public_subnet_cidrs   = ["10.100.0.0/27", "10.100.0.32/27"]
+private_subnet_cidrs  = ["10.100.0.64/27", "10.100.0.96/27"]
+
+# Optional larger EKS subnets from secondary_cidr_blocks.
+eks_private_subnet_cidrs = ["100.64.0.0/19", "100.64.32.0/19"]
+
+# One NAT Gateway is cheaper but creates an Availability Zone dependency.
+# Set false for one NAT Gateway per Availability Zone.
+single_nat_gateway = true
+
+# Lab 04 enables this.
+enable_eks          = false
+kubernetes_version  = "1.36"
+node_instance_types = ["t3.medium"]
+
+# Add the AWS SSO role ARN used in the console if it should administer Kubernetes objects.
+eks_cluster_admin_principal_arns = []
