@@ -77,3 +77,8 @@ output "karpenter_node_role_name" {
   description = "IAM role name used by Karpenter-created worker nodes."
   value       = try(module.eks[0].karpenter_node_role_name, null)
 }
+
+output "external_secrets_role_arn" {
+  description = "IAM role ARN associated with the External Secrets Operator ServiceAccount."
+  value       = try(module.eks[0].external_secrets_role_arn, null)
+}
