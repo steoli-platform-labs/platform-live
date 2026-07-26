@@ -13,7 +13,7 @@ module "network" {
   public_subnet_cidrs   = var.public_subnet_cidrs
   private_subnet_cidrs  = local.private_subnet_cidrs
 
-  cluster_name              = "${local.name_prefix}-eks"
+  cluster_name              = local.name_prefix
   enable_single_nat_gateway = var.single_nat_gateway
 
   common_tags = local.common_tags
