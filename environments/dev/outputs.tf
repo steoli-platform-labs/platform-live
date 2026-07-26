@@ -67,3 +67,13 @@ output "oidc_provider_arn" {
   description = "ARN of the EKS OIDC provider."
   value       = try(module.eks[0].oidc_provider_arn, null)
 }
+
+output "karpenter_controller_role_arn" {
+  description = "IAM role ARN associated with the Karpenter controller ServiceAccount."
+  value       = try(module.eks[0].karpenter_controller_role_arn, null)
+}
+
+output "karpenter_node_role_name" {
+  description = "IAM role name used by Karpenter-created worker nodes."
+  value       = try(module.eks[0].karpenter_node_role_name, null)
+}
