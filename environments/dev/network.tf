@@ -3,9 +3,6 @@ module "network" {
 
   prefix = local.name_prefix
 
-  create_vpc                  = true
-  create_operational_baseline = false
-
   vpc_name              = "${local.name_prefix}-vpc"
   vpc_cidr              = var.vpc_cidr
   secondary_cidr_blocks = var.secondary_cidr_blocks
