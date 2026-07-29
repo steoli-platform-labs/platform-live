@@ -1,11 +1,11 @@
 variable "aws_region" {
-  description = "AWS Region where the Development environment is provisioned."
+  description = "AWS Region where the shared lab infrastructure is provisioned."
   type        = string
   default     = "eu-north-1"
 }
 
 variable "allowed_account_ids" {
-  description = "AWS account ID where the Development environment is allowed to be provisioned."
+  description = "AWS account ID where the shared lab infrastructure is allowed to be provisioned."
   type        = string
 }
 
@@ -21,13 +21,13 @@ variable "project_name" {
 }
 
 variable "environment" {
-  description = "Environment name."
+  description = "Infrastructure environment name used for shared AWS resource names and tags. Kubernetes application environments are introduced separately in platform-config."
   type        = string
-  default     = "dev"
+  default     = "shared"
 }
 
 variable "vpc_cidr" {
-  description = "Primary CIDR block assigned to the Development VPC. Keep this range small and aligned with the agreed IP plan."
+  description = "Primary CIDR block assigned to the shared lab VPC. Keep this range small and aligned with the agreed IP plan."
   type        = string
   default     = "10.100.0.0/24"
 }
