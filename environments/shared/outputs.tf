@@ -1,25 +1,25 @@
 output "aws_account_id" {
-  description = "AWS account ID where the Development environment is deployed."
+  description = "AWS account ID where the shared lab infrastructure is deployed."
   value       = data.aws_caller_identity.current.account_id
 }
 
 output "availability_zones" {
-  description = "Availability Zones used by the Development environment."
+  description = "Availability Zones used by the shared lab infrastructure."
   value       = local.availability_zones
 }
 
 output "vpc_id" {
-  description = "ID of the Development VPC."
+  description = "ID of the shared lab VPC."
   value       = module.network.vpc_id
 }
 
 output "vpc_cidr_block" {
-  description = "Primary CIDR block of the Development VPC."
+  description = "Primary CIDR block of the shared lab VPC."
   value       = module.network.vpc_cidr_block
 }
 
 output "vpc_secondary_cidr_blocks" {
-  description = "Secondary CIDR blocks associated with the Development VPC."
+  description = "Secondary CIDR blocks associated with the shared lab VPC."
   value       = module.network.vpc_secondary_cidr_blocks
 }
 

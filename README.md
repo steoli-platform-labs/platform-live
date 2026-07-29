@@ -1,23 +1,23 @@
 # platform-live
 
-Environment-specific Terraform configurations for the AWS Platform Labs project.
+Shared Terraform configurations for the AWS Platform Labs project.
 
 ## Purpose
 
-This repository composes reusable modules from `platform-modules` into deployable environments. It stores no credentials and no Terraform state.
+This repository composes reusable modules from `platform-modules` into deployable shared lab infrastructure. It stores no credentials and no Terraform state.
 
 ## Repository Structure
 
 ```text
 environments/
-└── dev/
+└── shared/
 ```
 
 ## Lab 03
 
-The Development root module provisions the VPC across two Availability Zones with public and private subnets and a cost-optimized single NAT Gateway.
+The shared root module provisions the VPC across two Availability Zones with public and private subnets and a cost-optimized single NAT Gateway.
 
-Open `environments/dev/README.md` for commands.
+Open `environments/shared/README.md` for commands.
 
 ## Validation
 

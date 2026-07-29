@@ -1,6 +1,6 @@
-# Development Environment
+# Shared Infrastructure
 
-Terraform root module for the Development environment.
+Terraform root module for the shared AWS infrastructure used by the lab Kubernetes environments.
 
 Full guides:
 

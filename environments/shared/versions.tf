@@ -2,7 +2,7 @@ terraform {
   required_version = ">= 1.10.0, < 2.0.0"
 
   backend "s3" {
-    key          = "platform-live/dev/terraform.tfstate"
+    key          = "platform-live/shared/terraform.tfstate"
     encrypt      = true
     use_lockfile = true
   }
